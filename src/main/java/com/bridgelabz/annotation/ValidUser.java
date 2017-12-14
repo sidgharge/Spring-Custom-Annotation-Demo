@@ -9,17 +9,18 @@ import javax.validation.Constraint;
 
 import org.springframework.messaging.handler.annotation.Payload;
 
-import com.bridgelabz.validator.MobileValidator;
+import com.bridgelabz.validator.EmailValidator;
+import com.bridgelabz.validator.UserValidator;
 
-@Target({ ElementType.FIELD })
+@Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = MobileValidator.class)
-public @interface Mobile {
+@Constraint(validatedBy = UserValidator.class)
+public @interface ValidUser {
 
-	String message();
+	String message() default "";
 
 	Class<?>[] groups() default {};
 
 	Class<? extends Payload>[] payload() default {};
-
+	
 }

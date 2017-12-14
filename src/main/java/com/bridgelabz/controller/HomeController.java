@@ -13,6 +13,7 @@ import com.bridgelabz.model.User;
 public class HomeController {
 
 	@RequestMapping(value = "/user", method = {RequestMethod.POST, RequestMethod.GET})
-	public void test(@RequestBody @Valid User user2) {
+	public Object test(@RequestBody @Valid User user2) {
+		return null;
 	}
 }

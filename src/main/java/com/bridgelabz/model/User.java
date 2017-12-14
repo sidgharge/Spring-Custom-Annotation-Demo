@@ -1,14 +1,14 @@
 package com.bridgelabz.model;
 
-import com.bridgelabz.annotation.Email;
-import com.bridgelabz.annotation.Mobile;
+import com.bridgelabz.annotation.ValidUser;
 
+@ValidUser
 public class User {
 	
-	@Email
+	//@Email
 	String email;
 
-	@Mobile
+	//@Mobile(message = "")
 	String mobileNumber;
 
 	public String getEmail() {
